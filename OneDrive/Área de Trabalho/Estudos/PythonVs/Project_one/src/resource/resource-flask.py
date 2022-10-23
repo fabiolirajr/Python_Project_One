@@ -16,9 +16,9 @@ import datetime
 app = Flask(__name__)
 
 # Lendo a PRIVATE_KEY para assinar token:
-chave_privada = open("chaveprivada.pem", 'r').read()
+chave_privada = open("Adicione aqui sua chaveprivada.pem", 'r').read()
 # Lendo a PUBLIC_KEY para verificar/validar token:
-chave_publica = open("chavepublica.pem", 'r').read()
+chave_publica = open("Adicione aqui sua chavepublica.pem", 'r').read()
 
 app.config["JWT_PRIVATE_KEY"] = chave_privada
 app.config["JWT_PUBLIC_KEY"] = chave_publica
