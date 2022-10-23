@@ -1,6 +1,0 @@
-from pydantic import BaseModel
-
-class DadosCliente(BaseModel):
-    rNome = str
-    rEmail = str
-    nIdade = int
