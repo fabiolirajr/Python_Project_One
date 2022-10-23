@@ -17,7 +17,7 @@ app = Flask(__name__)
 
 # Lendo a PRIVATE_KEY para assinar token:
 chave_privada = open("chaveprivada.pem", 'r').read()
-# Lendo a PUBLIC_KEY para verificar token:
+# Lendo a PUBLIC_KEY para verificar/validar token:
 chave_publica = open("chavepublica.pem", 'r').read()
 
 app.config["JWT_PRIVATE_KEY"] = chave_privada
@@ -65,9 +65,7 @@ def consultaDadosCliente():
 def atualizaDados():
     """Atualizando dados do cliente"""
 
-    codigoServico = None
     #Recebe body request(Em formato JSON)
-
     dadosCliente = request.get_json()
 
     #Verificando se foi enviado os campos no request body
